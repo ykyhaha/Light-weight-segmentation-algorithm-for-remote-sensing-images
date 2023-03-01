@@ -48,7 +48,8 @@ img_h = 256
 n_label = 6
 INPUT_SHAPE = (256, 256, 3)
 
-#预测的时候用哪种模型预测就把那种模型的代码换上去，然后在compile
+#预测的时候用哪种模型预测就把那种模型的代码换上去，然后在compile，这里用的是bisenetV2
+#（Yu, C., Gao, C., Wang, J. et al. BiSeNet V2: Bilateral Network with Guided Aggregation for Real-Time Semantic Segmentation. Int J Comput Vis 129, 3051–3068 (2021). https://doi.org/10.1007/s11263-021-01515-2）
 
 def ge_layer(x_in, c, e=6, stride=1):
     x = layers.Conv2D(filters=c, kernel_size=(3, 3), padding='same')(x_in)
